@@ -20,7 +20,7 @@ To run this project, you need Python installed along with the following librarie
 
 1.  **Clone the repository** (or download the script):
     ```bash
-    git clone [https://github.com/yourusername/stock-backtester.git](https://github.com/yourusername/stock-backtester.git)
+    git clone https://github.com/tmaksymovych/simple-trading-algorith
     ```
 
 2.  **Install the required packages:**
