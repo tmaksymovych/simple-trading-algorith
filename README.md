@@ -40,21 +40,34 @@ pip install pandas yfinance
 
 This bot utilizes a momentum strategy based on two rolling averages:
 
-1. **Short Window:** 5-day Moving Average.
-2. **Long Window:** 20-day Moving Average.
+1. **Short Window:** 5-day Moving Average (Faster line).
+2. **Long Window:** 20-day Moving Average (Slower line).
 
-The Simple Moving Average (SMA) is calculated as the average of the closing prices over a specific number of days.
+The Simple Moving Average (SMA) is calculated as the arithmetic mean of the closing prices over a specific number of days. The mathematical formula used is:
 
-### Trading Logic
+$$SMA = \frac{A_1 + A_2 + ... + A_n}{n}$$
+
+Where:
+* **A** = closing price at a specific period
+* **n** = number of days in the window (e.g., 5 or 20)
+
+### Trading Logic and Visualization
+
+Below is a visual representation of the strategy implemented in this bot. It shows how the intersection of the short-term line (e.g., Blue) and long-term line (e.g., Red) generates signals.
+
+![Moving Average Crossover Strategy Example](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Moving_Average_Crossover.png/640px-Moving_Average_Crossover.png)
+*(Note: This image is an illustrative example of the strategy concept, not the real-time output of the script.)*
+
+The bot follows these rules based on the crossover points shown in the chart above:
 
 - **Buy Signal (Golden Cross):**
-  Occurs when the Short term average (5 days) crosses ABOVE the Long term average (20 days). This indicates upward momentum. The bot converts all cash into stock.
+  Occurs when the **Short** term average crosses **ABOVE** the Long term average. This indicates upward momentum. The bot converts all available cash into stock.
 
 - **Sell Signal (Death Cross):**
-  Occurs when the Short term average (5 days) crosses BELOW the Long term average (20 days). This indicates downward momentum. The bot sells all stocks and converts back to cash.
+  Occurs when the **Short** term average crosses **BELOW** the Long term average. This indicates downward momentum. The bot sells all held stocks and converts them back to cash.
 
 - **Hold:**
-  If no crossover occurs, the position remains unchanged.
+  If no crossover occurs compared to the previous day, the position remains unchanged.
 
 ## Disclaimer
 
