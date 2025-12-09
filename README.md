@@ -55,8 +55,8 @@ Where:
 
 Below is a visual representation of the strategy implemented in this bot. It shows how the intersection of the short-term line (e.g., Blue) and long-term line (e.g., Red) generates signals.
 
-![Moving Average Crossover Strategy Example](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Moving_Average_Crossover.png/640px-Moving_Average_Crossover.png)
-*(Note: This image is an illustrative example of the strategy concept, not the real-time output of the script.)*
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/c9b48650-da63-46bb-b418-42bad8d88509" />
+
 
 The bot follows these rules based on the crossover points shown in the chart above:
 
