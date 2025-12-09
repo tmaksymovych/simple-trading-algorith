@@ -34,7 +34,6 @@ To run this project, you need Python installed along with the following librarie
     ```bash
     python main.py
     ```
-    *(Note: Replace `main.py` with whatever you named your script)*
 
 2.  **Select a Stock:** When prompted, type the ticker symbol of the stock you want to analyze (e.g., `AAPL` or `TSLA`).
 3.  **Enter Deposit:** Input the amount of money ($) you wish to simulate investing.
